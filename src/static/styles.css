@@ -87,14 +87,59 @@ section h3 {
 }
 
 .participant-list {
-  padding-left: 20px;
+  padding: 0;
+  list-style: none;
   color: #4b5563;
   font-size: 14px;
+}
+
+.participant-row {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 10px;
+  min-height: 36px;
+  padding: 2px 0 2px 8px;
+  border-bottom: 1px solid #edf0f5;
+}
+
+.participant-email {
+  min-width: 0;
   overflow-wrap: anywhere;
 }
 
-.participant-list li {
-  padding: 2px 0;
+.remove-participant-button {
+  display: grid;
+  flex: 0 0 32px;
+  place-items: center;
+  width: 32px;
+  height: 32px;
+  padding: 0;
+  border: 1px solid transparent;
+  border-radius: 4px;
+  background: transparent;
+  color: #647084;
+}
+
+.remove-participant-button svg {
+  width: 16px;
+  height: 16px;
+}
+
+.remove-participant-button:hover {
+  border-color: #f1c7c5;
+  background: #fff1f0;
+  color: #b42318;
+}
+
+.remove-participant-button:focus-visible {
+  outline: 2px solid #1a237e;
+  outline-offset: 2px;
+}
+
+.remove-participant-button:disabled {
+  cursor: wait;
+  opacity: 0.55;
 }
 
 .form-group {
